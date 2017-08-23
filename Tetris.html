@@ -1,0 +1,59 @@
+<html>	
+<head>
+<title> tetris </title>
+	<style>
+		body {
+		background: #202028;
+		color: #fff;
+		font-family: sans-serif;
+		font-size: 50px;
+		text-align: center;
+		}
+		
+		canvas {
+			border: solid 1em #9b9ba3;
+			height: 80vh;
+		}
+		
+		</style>
+		
+	<style type = "text/css">
+		.button{
+			width:6em;
+			height:1.5em;
+			left:6px;
+			top:6px;
+			background-color:#9b9ba3;
+			font-size:1.5em;
+			margin-left: 10px;
+		}
+		</style>
+</head>
+
+<body>
+	<div id = "score"></div>
+	<canvas id = "tetris" width = "280" height = "400"  style="float:center"></canvas>
+	<div class="keys" >
+	<p>    <input type="button" class="button" value="Normal Mode" onclick='glass =0;'>
+	<input type="button" class="button" value="Glass Mode" onclick='glass = 1;'> 
+	<input type="button" class="button" value="New Game" onclick='newGame();'> </p>
+	</div>
+	
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCgh1WhdWDN_mWpKqfQzX1lrncCLBDdA_0",
+    authDomain: "tetris-398df.firebaseapp.com",
+    databaseURL: "https://tetris-398df.firebaseio.com",
+    projectId: "tetris-398df",
+    storageBucket: "tetris-398df.appspot.com",
+    messagingSenderId: "804685853522"
+  };
+  firebase.initializeApp(config);
+</script>
+
+	<script src = "tetris.js"></script>
+</body>
+
+</html>
